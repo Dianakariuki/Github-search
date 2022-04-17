@@ -8,7 +8,7 @@
 		<div class="panel-body">
 			<div class="row">
 				<div class="col-sm-3">
-					<img src="{{profile.avatar_url}}" class="img-circle img-responsive" alt="Profile Image">
+					<img src="{{profile.avatar_url}}" class="rounded-circle img-responsive" alt="Profile Image">
 				</div>
 				<div class="col-sm-5">
 					<ul class="list-group">
@@ -18,9 +18,12 @@
 						<li class="list-group-item" *ngIf="profile.email"><a href="emailto:{{profile.email}}">{{profile.email}}</a></li>
 					</ul>
 				</div>
+                
                 <div class="col-sm-4">
-                    <span class="label label-default">{{profile.followers}} Followers</span>
-                    <span class="label label-primary">Following {{profile.following}}</span>
-                    <span class="label label-success">{{profile.public_gists}} Public gists</span>
-                    <span class="label label-info">{{profile.public_repos}} Public Repos</span>
+                    <span class="badge bg-warning">{{profile.followers}} Followers</span>
+                    <span class="badge bg-primary">Following {{profile.following}}</span>
+                    <span class="badge bg-success">{{profile.public_gists}} Public gists</span>
+                    <span class="badge bg-info">{{profile.public_repos}} Public Repos</span>
                 </div>
+                
+            
