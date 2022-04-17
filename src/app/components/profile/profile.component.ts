@@ -26,7 +26,10 @@ constructor(private profileService: ProfileService) {
 
   }
 
-
+  findProfile(){
+  	this.profileService.updateProfile(this.username);
+  	
+  }
 
 
   ngOnInit(): void {

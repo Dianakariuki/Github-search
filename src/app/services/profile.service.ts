@@ -20,7 +20,7 @@ export class ProfileService {
     return this.http.get('https://api.github.com/users/Dianakariuki' )
     
   }
-
+ 
   getProfileRepos(){
   	return this.http.get("https://api.github.com/users/Dianakariuki/repos?")
   }
