@@ -8,12 +8,13 @@ import { ProfileService } from '../../services/profile.service';
 })
 export class ProfileComponent implements OnInit {
   profile:any;
+  username!: string;
   // ProfileService: any;
   
 
   
 constructor(private profileService: ProfileService) {
-      this.profileService.getProfileInfo().subscribe((profile) => {
+      this.profileService.getProfileInfo().subscribe(profile=>{
         console.log(profile);
         this.profile = profile;
       });
