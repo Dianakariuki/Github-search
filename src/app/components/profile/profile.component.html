@@ -1,11 +1,11 @@
 <div *ngIf="profile">
-	<div class="panel panel-default">
-		<div class="panel-heading">
+	<div class="card card-default">
+		<div class="card-heading">
 			{{profile.name}} <small>({{profile.login}})</small>
 			<span *ngIf="profile.company">, Works at {{profile.company}}</span>
 			{{profile.location}}
 		</div>
-		<div class="panel-body">
+		<div class="card-body">
 			<div class="row">
 				<div class="col-sm-3">
 					<img src="{{profile.avatar_url}}" class="rounded-circle img-responsive" alt="Profile Image">
@@ -26,11 +26,11 @@
                     <span class="badge bg-info">{{profile.public_repos}} Public Repos</span>
 
                     <p><a href="{{profile.html_url}}" target="_blank" class="btn btn-success btn-sm">View profile on github</a></p>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Repos</h3>
+                    <div class=" card card-default">
+                        <div class="card-heading">
+                            <h3 class="card-title">Repos</h3>
                         </div>
-                        <div class="panel-body" *ngFor="let repo of repos">
+                        <div class="card-body" *ngFor="let repo of repos">
                             <p class="clearfix">
                                 {{repo.name}} <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-warning pull-right">View this project on github</a>
                             </p>
