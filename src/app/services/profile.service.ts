@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, InjectionToken } from '@angular/core';
 import{HttpClient } from  '@angular/common/http';
 
 import { map } from 'rxjs/internal/operators/map';
@@ -9,7 +9,6 @@ import { map } from 'rxjs/internal/operators/map';
 export class ProfileService {
 
   private username:string;
- 
   private token= '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';
 
   constructor( private http:HttpClient) { 
@@ -18,7 +17,8 @@ export class ProfileService {
 
   }
   getProfileInfo(){
-    return this.http.get("https://api.github.com/users/").pipe(map((_data: any) => {})) + this.username + "&token=" + this.token;
+    return this.http.get('https://api.github.com/users/Dianakariuki?token='  + this.token+ this.username ).pipe(map((_data: any) => {})) ;
+    
 
     
   }
