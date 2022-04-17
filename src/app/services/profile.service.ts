@@ -9,15 +9,18 @@ import { map } from 'rxjs/internal/operators/map';
 export class ProfileService {
 
   private username:string;
-  private token= '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';
+  private clientid = '397bb5ee06176f96cc63';
+    private clientsecret = '397bb5ee06176f96cc63';
 
   constructor( private http:HttpClient) { 
     console.log("service is now ready!");
     this.username = 'Dianakariuki';
-
+   
+  
   }
-  getProfileInfo(){
-    return this.http.get('https://api.github.com/users/Dianakariuki?token='  + this.token+ this.username ).pipe(map((_data: any) => {})) ;
+  
+    getProfileInfo(){
+      return this.http.get("https://api.github.com/users/" + this.username + "?client_id=" + this.clientid + "&client_secret=" + this.clientsecret).pipe(map((_data: any) => {})) ;
     
 
     
