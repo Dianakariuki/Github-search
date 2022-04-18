@@ -22,7 +22,7 @@ export class ProfileService {
   }
 
   getProfileRepos(){
-  	return this.http.get('https://api.github.com/users/repos? per_page 50' )
+  	return this.http.get('https://api.github.com/users/Dianakariuki/repos? per_page 50' )
   }
   updateProfile(username: string) {
           this.username = username;

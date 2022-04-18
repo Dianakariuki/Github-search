@@ -6,11 +6,17 @@ import { AppComponent } from './app.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ProfileService } from './services/profile.service';
 import { FormsModule } from '@angular/forms';
+import { UserComponent } from './user/user.component';
+import { HighlightDirective } from './highlight.directive';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
+    UserComponent,
+    HighlightDirective,
+    SearchPipe,
      
   ],
   
