@@ -1,3 +1,6 @@
+##### By Diana Kariuki
+### This a github search built with angular to find any user on github using the git hub api
+
 # GithubSearch
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.
