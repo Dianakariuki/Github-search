@@ -17,12 +17,12 @@ export class ProfileService {
    
   }
   getProfileInfo(){
-    return this.http.get('https://api.github.com/users' + this.username)
+    return this.http.get('https://api.github.com/users/' + this.username )
     
   }
 
   getProfileRepos(){
-  	return this.http.get("https://api.github.com/users/repos?"+ this.username)
+  	return this.http.get('https://api.github.com/users/repos? per_page 50' )
   }
   updateProfile(username: string) {
           this.username = username;

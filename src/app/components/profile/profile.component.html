@@ -1,13 +1,17 @@
-
+<i class="fa fa-github fa-5x" aria-hidden="true" id="icon"></i>
 <form action="" class="search-form">
+    
 	<div class="form-group">
-		<input type="text" class="form-control" placeholder="Search github users with username" 
-        [(ngModel)]="username" name="username" (keyup)="findProfile()">
+
+        <label for="inputtext" class="col">GIT-SEARCH</label>
+          <br> <br>          
+		<input type="text" class="form-control" placeholder="Enter a  username" 
+        [(ngModel)]="username" name="username" (keyup)="findProfile()" target="_blank" >
 	</div>
 </form>
 
 <div *ngIf="profile">
-	<div class="card card-default">
+	<div class="card ">
 		<div class="card-heading">
 			{{profile.name}} <small>({{profile.login}})</small>
 			<span *ngIf="profile.company">, Works at {{profile.company}}</span>
@@ -34,7 +38,7 @@
                     <span class="badge bg-info">{{profile.public_repos}} Public Repos</span>
 
                     <p><a href="{{profile.html_url}}" target="_blank" class="btn btn-success btn-sm">View profile on github</a></p>
-                    <div class=" card card-default">
+                    <div class="card">
                         <div class="card-heading">
                             <h3 class="card-title">Repos</h3>
                         </div>
